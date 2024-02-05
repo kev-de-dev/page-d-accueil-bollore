@@ -1,0 +1,46 @@
+<!-- Interface.html -->
+<html>
+<head>
+    <title>Configuration Réseau</title>
+    <hta:application id="configureNetwork" applicationname="configureNetwork" />
+    <script language="VBScript">
+        Sub ExécuterScript()
+            Dim InterfaceIndex, SubnetMask, Gateway, DnsServers, DnsSuffixes
+            InterfaceIndex = document.getElementById("InterfaceIndex").value
+            SubnetMask = document.getElementById("SubnetMask").value
+            Gateway = document.getElementById("Gateway").value
+            DnsServers = Split(document.getElementById("DnsServers").value, ",")
+            DnsSuffixes = Split(document.getElementById("DnsSuffixes").value, ",")
+
+            Dim objShell
+            Set objShell = CreateObject("WScript.Shell")
+
+            ' Exécute le script PowerShell en passant les paramètres
+            objShell.Run "powershell.exe -File ConfigureNetwork.ps1 -InterfaceIndex " & InterfaceIndex & " -SubnetMask " & SubnetMask & " -Gateway " & Gateway & " -DnsServers " & Join(DnsServers, ",") & " -DnsSuffixes " & Join(DnsSuffixes, ","), 1, True
+
+            Set objShell = Nothing
+        End Sub
+    </script>
+</head>
+<body>
+    <h1>Configuration Réseau</h1>
+    <form>
+        <label for="InterfaceIndex">Index de l'interface:</label>
+        <input type="text" id="InterfaceIndex" />
+        <br />
+        <label for="SubnetMask">Masque de sous-réseau:</label>
+        <input type="text" id="SubnetMask" />
+        <br />
+        <label for="Gateway">Passerelle:</label>
+        <input type="text" id="Gateway" />
+        <br />
+        <label for="DnsServers">Serveurs DNS (séparés par des virgules):</label>
+        <input type="text" id="DnsServers" />
+        <br />
+        <label for="DnsSuffixes">Suffixes DNS (séparés par des virgules):</label>
+        <input type="text" id="DnsSuffixes" />
+        <br />
+        <button type="button" onclick="ExécuterScript()">Configurer le réseau</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+' RunConfigureNetwork.vbs
+
+Dim objShell
+Set objShell = CreateObject("WScript.Shell")
+
+' Paramètres à passer au script PowerShell
+Dim InterfaceIndex, SubnetMask, Gateway, DnsServers, DnsSuffixes
+InterfaceIndex = 3
+SubnetMask = "255.255.40.0"
+Gateway = "192.123.16.1"
+DnsServers = Array("10.151.180.46", "10.151.180.47")
+DnsSuffixes = Array("bollore.lan", "holding.bollore.com")
+
+' Construit la commande PowerShell avec les paramètres
+Dim command
+command = "powershell.exe -ExecutionPolicy Bypass -File ConfigureNetwork.ps1 -InterfaceIndex " & InterfaceIndex & " -SubnetMask " & SubnetMask & " -Gateway " & Gateway & " -DnsServers " & Join(DnsServers, ",") & " -DnsSuffixes " & Join(DnsSuffixes, ",")
+
+' Exécute la commande PowerShell
+objShell.Run command, 1, True
+
+Set objShell = Nothing

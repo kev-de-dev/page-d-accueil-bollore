@@ -1,0 +1,130 @@
+:root {
+    --main-color: rgb(39, 223, 22);
+    --border-color: rgb(187, 187, 187);
+}
+
+h1 {
+    font-size: 27px;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+* {
+    text-decoration: none;
+    box-sizing: border-box; /* Déplacer cette règle ici pour éviter de la répéter */
+}
+
+body {
+    width: 100%;
+    user-select: none;
+    padding: 0 4px;
+    border-right: 2px solid var(--border-color);
+    margin: 0;
+    font-family: 'Your Preferred Font', sans-serif;
+    color: #666666;
+}
+
+header {
+    position: fixed;
+    padding: 12px;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #0b4638;
+    color: #4a4a4a;
+    z-index: 1000;
+}
+
+header a {
+    color: #63d70a;
+    border: 1px solid #ffd001;
+    border-radius: 20px;
+    padding: 12px;
+}
+
+main {
+    padding: 10%;
+    min-height: 100vh;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    border: 3px solid #05530423;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #0da92221;
+}
+
+section a {
+    color: #d0d70a;
+}
+
+section h2 {
+    color: #333;
+}
+
+section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+section li {
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    color: #fff;
+    background-color: #09785e;
+    padding: 15px;
+    margin: 10px;
+    border-inline-end-color: #ffd001;
+    border: 2.5px solid #ffd001;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+section li:hover {
+    background-color: #075c49;
+    color: #fff;
+}
+
+.mesLiens {
+    background-color: aquamarine;
+}
+
+footer {
+    background-color: #023b0a;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+pre {
+    background-color: #1E1E1E;
+    color: #00FF00;
+    padding: 10px;
+    font-family: 'Courier New', monospace;
+}
