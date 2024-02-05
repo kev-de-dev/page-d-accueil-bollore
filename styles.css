@@ -108,6 +108,13 @@ section li:hover {
     background-color: #075c49;
     color: #fff;
 }
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2rem;
+}
 
 .mesLiens {
     background-color: aquamarine;
