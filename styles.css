@@ -52,6 +52,7 @@ main {
 nav {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: 10px;
 }
 
@@ -60,6 +61,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
 }
 
 nav li {
@@ -67,10 +69,13 @@ nav li {
 }
 
 section {
-    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 20px;
     border: 3px solid #05530423;
     border-radius: 20px;
-    padding: 20px;
+    padding: 35px;
     background-color: #0da92221;
 }
 
@@ -92,28 +97,31 @@ section ul {
 
 section li {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    width: 25%;
-    color: #fff;
+    align-items: center;
+    width: 35%;
+    height: 100px;
     background-color: #09785e;
     padding: 15px;
     margin: 10px;
     border-inline-end-color: #ffd001;
     border: 2.5px solid #ffd001;
     border-radius: 20px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 1s ease;
+    font-size: 1.5rem;
 }
 
 section li:hover {
     background-color: #075c49;
-    color: #fff;
+
 }
 div {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .mesLiens {
@@ -130,8 +138,10 @@ footer {
     width: 100%;
 }
 pre {
+    border-radius: 10px;
     background-color: #1E1E1E;
-    color: #00FF00;
-    padding: 10px;
+    color: #fff700;
+    padding: 20px;
     font-family: 'Courier New', monospace;
+    font-size: 1.5rem;
 }
