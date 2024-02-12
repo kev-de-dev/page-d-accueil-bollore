@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Street View Example</title>
-
-    <style>
-        /* Définissez la taille de l'iframe */
-        #street-view-iframe {
-            height: 400px;
-            width: 100%;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insulteur Aléatoire</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    button {
+      font-size: 1.2em;
+      padding: 10px 20px;
+      margin-top: 20px;
+      cursor: pointer;
+      background-color: #ff9999;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
-    <h1>Google Street View Example</h1>
+  <h1>Insulteur Aléatoire</h1>
+  <div id="insulte"></div>
+  <button onclick="genererInsulte()">Générer Insulte</button>
 
-    <!-- Intégrez la vue Street View dans une balise iframe -->
-    <iframe id="street-view-iframe" frameborder="0" style="border:0"
-        src="https://bcare.service-now.com/nav_to.do?uri=%2F$pa_dashboard.do%3Fsysparm_dashboard%3Da4b768611b7f7194f68aeb52b24bcb73"
-        allowfullscreen>
-    </iframe>
-
+  <script src="script.js"></script>
 </body>
 </html>

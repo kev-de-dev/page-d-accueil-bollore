@@ -3,27 +3,49 @@
     --border-color: rgb(187, 187, 187);
 }
 
+
+
+* {
+    transition: background-color 0.3s ease, color 1s ease;
+    text-decoration: none;
+    box-sizing: border-box;
+
+
+}
+button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #ff9999;
+    border: none;
+    border-radius: 5px;
+  }
+
 h1 {
     font-size: 27px;
+    
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 2rem;  
 }
-
-* {
-    text-decoration: none;
-    box-sizing: border-box; /* Déplacer cette règle ici pour éviter de la répéter */
+h3 , p {
+    font-family: 'Shrikhand', sans-serif;
+    color: #0f725b;
 }
 
 body {
     width: 100%;
     user-select: none;
-    padding: 0 4px;
     border-right: 2px solid var(--border-color);
     margin: 0;
-    font-family: 'Your Preferred Font', sans-serif;
-    color: #666666;
+    font-family: 'Lato', sans-serif;
+
+
+
+
+    color: #61650b;
 }
 
 header {
@@ -58,8 +80,8 @@ nav {
 
 nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    margin-bottom: 25px;
+    padding: 15px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -95,33 +117,50 @@ section ul {
     justify-content: space-between;
 }
 
-section li {
-    display: flex;
+aside section ul {
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 35%;
+    display: flex;
+    justify-content: space-between;
+}
+
+section li {
+    width: calc(40% - 20px);
     height: 100px;
     background-color: #09785e;
+    color: #fff;
     padding: 15px;
     margin: 10px;
     border-inline-end-color: #ffd001;
     border: 2.5px solid #ffd001;
     border-radius: 20px;
-    transition: background-color 0.3s ease, color 1s ease;
-    font-size: 1.5rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 section li:hover {
     background-color: #075c49;
-
 }
+
+pre {
+    border-radius: 10px;
+    background-color: #1E1E1E;
+    color: #fff700;
+    padding: 5px;
+    margin-right: 2%;
+    
+    font-size: 1.5rem;
+}
+
 div {
+    margin-top: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-size: 2.5rem;
+    transition: background-color 1s ease, color 1s ease;
 }
 
 .mesLiens {
@@ -136,12 +175,4 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-}
-pre {
-    border-radius: 10px;
-    background-color: #1E1E1E;
-    color: #fff700;
-    padding: 20px;
-    font-family: 'Courier New', monospace;
-    font-size: 1.5rem;
 }

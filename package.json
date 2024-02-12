@@ -1,0 +1,12 @@
+{
+    "name": "page-daccueil-bollore",
+    "version": "1.0.0",
+    "description": "Description de votre projet",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Votre nom",
+    "license": "ISC"
+  }
+  
