@@ -1,62 +1,44 @@
+/* Définition des variables */
 :root {
     --main-color: rgb(39, 223, 22);
     --border-color: rgb(187, 187, 187);
 }
 
-
-
+/* Styles généraux */
 * {
-    transition: background-color 0.3s ease, color 1s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
     text-decoration: none;
     box-sizing: border-box;
-
-
+    font-size: 1.15rem;
 }
-button {
-    font-size: 1.2em;
-    padding: 10px 20px;
-    margin-top: 20px;
-    cursor: pointer;
-    background-color: #ff9999;
-    border: none;
-    border-radius: 5px;
-  }
+
 
 h1 {
     font-size: 27px;
-    
 }
 
 h2 {
-    font-size: 2rem;  
+    font-size: 2rem;
 }
-h3 , p {
+
+h3, p {
     font-family: 'Shrikhand', sans-serif;
-    color: #0f725b;
 }
 
 body {
     width: 100%;
     user-select: none;
-    border-right: 2px solid var(--border-color);
     margin: 0;
     font-family: 'Lato', sans-serif;
-
-
-
-
     color: #61650b;
 }
 
 header {
-    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
     padding: 12px;
-    top: 0;
-    left: 0;
-    right: 0;
     background-color: #0b4638;
     color: #4a4a4a;
-    z-index: 1000;
 }
 
 header a {
@@ -67,15 +49,8 @@ header a {
 }
 
 main {
-    padding: 10%;
+    padding: 5%;
     min-height: 100vh;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 10px;
 }
 
 nav ul {
@@ -93,20 +68,13 @@ nav li {
 section {
     display: flex;
     flex-wrap: wrap;
+  
+    text-align: center;
     flex-direction: column;
     margin: 20px;
-    border: 3px solid #05530423;
+    border: 4.5px solid rgba(30, 30, 30, 0.4);
     border-radius: 20px;
     padding: 35px;
-    background-color: #0da92221;
-}
-
-section a {
-    color: #d0d70a;
-}
-
-section h2 {
-    color: #333;
 }
 
 section ul {
@@ -114,43 +82,49 @@ section ul {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: space-between;
-}
-
-aside section ul {
     flex-wrap: wrap;
-    display: flex;
     justify-content: space-between;
 }
 
 section li {
+    display: flex;
+   flex-wrap: wrap;
+    align-content: center;
     width: calc(40% - 20px);
-    height: 100px;
-    background-color: #09785e;
-    color: #fff;
+    min-height: 100px;
+    background-color: #e3e4e4;
     padding: 15px;
     margin: 10px;
-    border-inline-end-color: #ffd001;
-    border: 2.5px solid #ffd001;
     border-radius: 20px;
-    
-    display: flex;
+    border-style: inset;
+    border: 9px solid #1e1e1e22;
+  
     align-items: center;
-    justify-content: center;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, font-size 0.3s ease;
 }
 
 section li:hover {
-    background-color: #075c49;
+    background-color: rgba(29, 129, 67, 0.372);
+}
+
+section a {
+    color: rgb(3, 3, 3);
+}
+
+section a:hover {
+    font-size: larger;
 }
 
 pre {
+    display: flex;
+    flex-wrap: wrap;
     border-radius: 10px;
     background-color: #1E1E1E;
     color: #fff700;
     padding: 5px;
     margin-right: 2%;
-    
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+
 }
 
 div {
@@ -169,7 +143,6 @@ div {
 
 footer {
     background-color: #023b0a;
-    color: #fff;
     text-align: center;
     padding: 10px;
     position: fixed;
