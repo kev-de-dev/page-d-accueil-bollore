@@ -4,13 +4,54 @@
     --border-color: rgb(187, 187, 187);
 }
 
+/* Définition des animations */
+@keyframes backInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    80% {
+        transform: translateY(10%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes backInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    80% {
+        transform: translateX(-10%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Application des animations */
+section {
+    animation: backInDown 1.3s ease;
+}
+
+p {
+    animation: backInDown 2s ease;
+}
+
+header {
+    animation: backInRight 1s ease;
+}
+
 /* Styles généraux */
 * {
     transition: background-color 0.3s ease, color 0.3s ease;
     text-decoration: none;
     box-sizing: border-box;
-    font-size: 1.10rem; 
-   
+    font-size: 1.10rem;
 }
 
 input {
@@ -40,14 +81,13 @@ body {
     user-select: none;
     margin: 0;
     font-family: 'Lato', sans-serif;
-
 }
 
 header {
     display: flex;
     flex-wrap: wrap;
     padding: 12px;
-    background-color: #06362bd7;
+    background-image: linear-gradient(to right, rgba(26, 73, 49, 0.829), rgba(34, 150, 16, 0.541));
     color: #4a4a4a;
     border-radius: 8px;
     border-style: inset;
@@ -55,18 +95,22 @@ header {
 }
 
 header a {
+    font-size: 1.35rem;
     color: #63d70a;
-    padding: 12px;
-    border: 1px solid #ffd001;
+    padding: 22px;
+   
+    border: 3px solid #ffee02;
     border-radius: 20px;
     border-style: outset;
+    background-color: #285406;
 }
+
+
 header li :hover {
     color: #214605;
     background-color: #ffd001b5;
-    border: 3px solid  #2a5b05;
+    border: 3px solid #2a5b05;
     border-radius: 20px;
-   
     border-style: inset;
 }
 
@@ -93,11 +137,12 @@ section {
     flex-wrap: wrap;
     flex-direction: column;
     margin: 20px;
-
+    border: 9px solid #dad9cc;
     border-style: groove;
     border-radius: 20px;
     padding: 35px;
     box-shadow: 0px 14px 14px 4px #0103281d;
+   
 }
 
 section p {
@@ -109,28 +154,28 @@ section ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
 }
 
+
+    
 section li {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
     width: calc(40% - 20px);
     min-height: 100px;
-    background-color: #e3e4e4;
+    
     padding: 15px;
     margin: 10px;
     border-radius: 20px;
+    border: #1211116e;
     border-style: inset;
     box-shadow: 4px 4px 4px 4px #0103284a;
     align-items: center;
-    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, 0.3s ease;
 }
 
 section li:hover {
-    background-color: rgba(226, 237, 232, 0.105);
-    transition: color 8s ;
+    background-image: linear-gradient(to left, rgba(54, 62, 58, 0.26), rgba(255, 255, 255, 0.014));
 }
 
 pre {
@@ -145,25 +190,37 @@ pre {
     box-shadow: 0px 14px 14px 4px #021f041d;
 }
 
-div {
+div p {
+    font-style: italic;
     margin-top: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-size: 2.5rem;
-    transition: background-color 1s ease, color 1s ease;
+    color: #4746409e;
+}
+
+aside section li {
+    border-style: inset;
+    font-style: italic;
+}
+
+aside section li:hover {
+    border-color: rgba(236, 190, 7, 0.573);
+    background-image: linear-gradient(to right, rgba(58, 73, 26, 0.068), rgba(44, 59, 42, 0.068));
 }
 
 footer {
     color: #fff200;
-    box-shadow:  14px 0px 14px 4px #03097618;
-    background-color: #023b0aa2;
+    box-shadow: 14px 0px 14px 4px #03097618;
     text-align: center;
     padding: 5px;
     bottom: 0;
     width: 100%;
     border-radius: 8px;
+    background-image: linear-gradient(to right, rgba(26, 73, 49, 0.829), rgba(123, 150, 16, 0.541));
+    color: #dcd50f;
 }
 
 /* Responsive Design */
@@ -172,14 +229,14 @@ footer {
         flex-wrap: wrap;
         flex-direction: column;
     }
-    
+
     header a {
         display: flex;
         flex-direction: column;
         margin-top: 15px;
     }
-    
+
     section li {
-        width: calc(100% - 20px);
+        width: 97%;
     }
 }
